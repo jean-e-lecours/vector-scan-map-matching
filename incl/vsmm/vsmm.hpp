@@ -2,12 +2,20 @@
 #define VSMM_H
 
 #include <iostream>
+#include <vector>
 
 class Vertex{
-  public:
-    int label;
+    inline static int total_count = 0;
+    inline static int dimensions = 2;
 
-    void print_vertex_info();
+    int label;
+    public:
+        std::vector<double> position;
+
+        void print_vertex_info();
+
+        Vertex();
+        Vertex(std::vector<double> position);
 };
 
 #endif
